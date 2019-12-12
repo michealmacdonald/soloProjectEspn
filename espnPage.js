@@ -214,10 +214,9 @@ var nflCommands = {
         .waitForElementPresent('@injuries')
         .click('@injuries')
         .waitForElementPresent('(//section[@class="ResponsiveTable Table__league-injuries"])[29]')
-        // .getText('(//section[@class="ResponsiveTable Table__league-injuries"])[29]', function(result) {
-        //     console.log('Injuries for the', result.value)
-        // })
-        .getText()
+        .getText('(//section[@class="ResponsiveTable Table__league-injuries"])[29]', function(result) {
+            console.log('Injuries for the', result.value)
+        })
         return this
     },
     grabNews: function() {
